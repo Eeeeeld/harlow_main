@@ -28,6 +28,11 @@
                         </a>
                     </li>
                     <li>
+                        <a href="#" id="wishlist-toggle" class="cart-icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </a>
+                    </li>
+                    <li>
                         <a href="#" id="cart-toggle" class="cart-icon">
                             <i class="fas fa-shopping-bag"></i>
                             <span class="cart-count">0</span>
@@ -48,6 +53,55 @@
         </div>
     </section>
 
+    <section class="ad-section">
+        <div class="container">
+            <h2 class="section-title">Featured Looks</h2>
+
+            <div class="ad-carousel" id="ad-carousel">
+                <div class="ad-track" id="ad-track">
+
+                    <div class="ad-slide">
+                        <img src="image/Y1.jpg" alt="Ad 1">
+                        <div class="ad-caption">
+                            <h3>Daiquiri Dress</h3>
+                            <p>Freedom in Every Stitch</p>
+                            <button class="ad-btn" data-id="1">Shop Now</button>
+                        </div>
+                    </div>
+
+                    <div class="ad-slide">
+                        <img src="image/Y2.jpg" alt="Ad 2">
+                        <div class="ad-caption">
+                            <h3>Clover Baby Tanks</h3>
+                            <p>Effortless everyday wear</p>
+                            <button class="ad-btn" data-id="2">Shop Now</button>
+                        </div>
+                    </div>
+
+                    <div class="ad-slide">
+                        <img src="image/Y3.jpg" alt="Ad 3">
+                        <div class="ad-caption">
+                            <h3>Chasing Denim</h3>
+                            <p>Minimal. Bold. You.</p>
+                            <button class="ad-btn" data-id="3">Shop Now</button>
+                        </div>
+                    </div>
+
+                    <div class="ad-slide">
+                        <img src="image/Y4.jpg" alt="Ad 4">
+                        <div class="ad-caption">
+                            <h3>Southside Shorts</h3>
+                            <p>Comfort meets style</p>
+                            <button class="ad-btn" data-id="4">Shop Now</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
     <section id="collections" class="collections">
         <div class="container">
             <h2 class="section-title">Our Collections</h2>
@@ -62,7 +116,10 @@
                         <h3 class="product-title">Daiquiri Dress</h3>
                         <span class="product-price">Rp 119.000</span>
                         <div class="product-actions">
-                            <button class="btn" style="width:100%;padding:10px;background:var(--primary);color:var(--dark)">Add to Cart</button>
+                            <button class="btn add-cart">Add to Cart</button>
+                            <button class="wishlist-btn" data-id="1">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -76,7 +133,10 @@
                         <h3 class="product-title">Clover Baby ~ Tanks</h3>
                         <span class="product-price">Rp 139.000</span>
                         <div class="product-actions">
-                            <button class="btn" style="width:100%;padding:10px;background:var(--primary);color:var(--dark)">Add to Cart</button>
+                            <button class="btn add-cart">Add to Cart</button>
+                            <button class="wishlist-btn" data-id="1">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -90,7 +150,10 @@
                         <h3 class="product-title">Chasing Denim</h3>
                         <span class="product-price">Rp 99.000</span>
                         <div class="product-actions">
-                            <button class="btn" style="width:100%;padding:10px;background:var(--primary);color:var(--dark)">Add to Cart</button>
+                            <button class="btn add-cart">Add to Cart</button>
+                            <button class="wishlist-btn" data-id="1">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -104,7 +167,10 @@
                         <h3 class="product-title">Southside Beach Shorts</h3>
                         <span class="product-price">Rp 109.000</span>
                         <div class="product-actions">
-                            <button class="btn" style="width:100%;padding:10px;background:var(--primary);color:var(--dark)">Add to Cart</button>
+                            <button class="btn add-cart">Add to Cart</button>
+                            <button class="wishlist-btn" data-id="1">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -254,6 +320,13 @@
                     <img src="" alt="" id="modal-product-image">
                 </div>
                 <div class="product-modal-content">
+                    <div class="product-comments">
+                        <h4>Comments</h4>
+                        <div class="comment-list" id="comment-list"></div>
+
+                        <textarea id="comment-input" placeholder="Write a comment..."></textarea>
+                        <button class="btn" id="add-comment">Post</button>
+                    </div>
                     <h2 id="modal-product-title"></h2>
                     <div class="product-modal-price" id="modal-product-price"></div>
                     <div class="product-modal-description" id="modal-product-description">
@@ -296,6 +369,19 @@
             </a>
         </div>
     </div>
+
+    <!-- Wishlist Sidebar -->
+    <div class="wishlist-sidebar" id="wishlist-sidebar">
+        <div class="cart-header">
+            <h3>Your Wishlist</h3>
+            <button class="close-wishlist">&times;</button>
+        </div>
+
+        <div class="wishlist-items" id="wishlist-items">
+            <p style="text-align:center;">Your wishlist is empty</p>
+        </div>
+    </div>
+
 
     <!-- Overlay -->
     <div class="overlay" id="overlay"></div>
